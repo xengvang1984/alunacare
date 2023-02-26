@@ -10,7 +10,7 @@ export class SearchPage extends BasePage {
     constructor(page: Page) {
         super(page);
         this.searchInput = page.getByPlaceholder(this.SEARCH_INPUT_PLACE_HOLDER_TEXT);
-        this.findPatientBtn = page.locator("[data-find-patient-btn]");
+        this.findPatientBtn = page.getByTestId("findPatientBtn");
     }
 
     async fillSearchInput(patientIdentifier: string) {

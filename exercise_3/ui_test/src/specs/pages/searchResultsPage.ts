@@ -15,12 +15,13 @@ export class SearchResultsPage extends BasePage {
 
     constructor(page: Page) {
         super(page);
-        this.backBtn = page.locator("[data-back-btn]");
-        this.resultsMsg = page.locator("[data-result-msg]");
-        this.patientName = page.locator("[data-patient-name]");
-        this.patientDob = page.locator("[data-patient-dob]");
-        this.patientGender = page.locator("[data-patient-gender]");
-        this.patientIdentifier = page.locator("[data-patient-identifier]");
+        // Back button test id would = data-testid="backBtn"
+        this.backBtn = page.getByTestId("backBtn");
+        this.resultsMsg = page.getByTestId("resultMsg");
+        this.patientName = page.getByTestId("patientName");
+        this.patientDob = page.getByTestId("patientDob");
+        this.patientGender = page.getByTestId("patientGender");
+        this.patientIdentifier = page.getByTestId("patientIdentifier");
         
     }
 
